@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Urban Bulletin - Live Masterclass</title>
+    
+    <!-- Google Fonts - Newspaper Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Instrument+Serif:ital@0;1&family=UnifrakturMaguntia&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Motion Animation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+</head>
+<body>
+    <!-- Moving Ticker Bar -->
+    <div class="ticker-bar">
+        <div class="ticker-track">
+            <div class="ticker-content">
+                <span class="ticker-item">★ FINAL EDITION ★</span>
+                <span class="ticker-item">GOING LIVE IN: <span id="countdown">00:00:00:00</span></span>
+                <span class="ticker-item">★ LIVE MASTERCLASS ★</span>
+                <span class="ticker-item">JAN 01-31, 2026</span>
+                <span class="ticker-item">LIMITED SEATS AVAILABLE</span>
+                <span class="ticker-item">★ NO REPLAY ★</span>
+                <span class="ticker-item">REGISTER NOW</span>
+            </div>
+            <div class="ticker-content" aria-hidden="true">
+                <span class="ticker-item">★ FINAL EDITION ★</span>
+                <span class="ticker-item">GOING LIVE IN: <span class="countdown-clone">00:00:00:00</span></span>
+                <span class="ticker-item">★ LIVE MASTERCLASS ★</span>
+                <span class="ticker-item">JANUARY 27-29, 2025</span>
+                <span class="ticker-item">★ FREE ACCESS ★</span>
+                <span class="ticker-item">LIMITED SEATS AVAILABLE</span>
+                <span class="ticker-item">★ NO REPLAY ★</span>
+                <span class="ticker-item">REGISTER NOW</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Newspaper Container -->
+    <div class="newspaper-container" id="main">
+        <!-- Header / Masthead -->
+        <header class="masthead">
+            <div class="masthead-top">
+                <div class="weather-badge">
+                    <span class="label">LIVE MASTERCLASS</span>
+                </div>
+                <div class="edition-info">
+                    <span>Jan 01-31, 2026</span>
+                </div>
+            </div>
+            
+            <div class="masthead-main">
+                <div class="decorative-line"></div>
+                <h1 class="newspaper-title">The Urban Bulletin</h1>
+                <div class="decorative-line"></div>
+            </div>
+            
+            <div class="masthead-sub">
+                <span class="vol-info">VOL. CXXVII... No. 43,892</span>
+                <span class="motto">"Breaking News: 7 FIGURE BLUEPRINT REVEALED"</span>
+                <span class="price">• LIMITED SEATS</span>
+            </div>
+        </header>
+
+        <!-- Main Headline -->
+        <section class="headline-section">
+            <div class="headline-container">
+                <h2 class="main-headline">
+                    STEAL THE <span class="highlight-red">Q4 DROP BLUEPRINT</span> THAT TOOK ME FROM <span class="highlight-red">KICKED OUT AT 18</span> TO A 7-FIGURE BRAND
+                </h2>
+                <p class="headline-sub">Here's what you'll learn — starting <strong>Jan 01 @ 10AM PST</strong></p>
+                <div class="headline-rule"></div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="video-frame">
+                <div class="video-header">
+                    <span class="video-label">★ EXCLUSIVE VIDEO BULLETIN ★</span>
+                </div>
+                <div class="video-container">
+                    <iframe 
+                        id="video-iframe"
+                        src="https://scripts.converteai.net/cb8cd89e-fa92-49b4-9bea-18252756ed4b/players/68c90f1542e61f4d973c1495/v4/embed.html" 
+                        frameborder="0" 
+                        allowfullscreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    ></iframe>
+                </div>
+            </div>
+            
+            <!-- CTA Below Video -->
+            <div class="video-cta">
+                <a href="#apply" class="video-cta-button">
+                    <span class="video-cta-text">I'M IN – SAVE MY SEAT</span>
+                </a>
+                <div class="video-cta-badges">
+                    <span class="video-badge">
+                        <span class="badge-dot">●</span>
+                        Free Access
+                    </span>
+                    <span class="video-badge">
+                        <span class="badge-dot">●</span>
+                        Limited Seats
+                    </span>
+                    <span class="video-badge">
+                        <span class="badge-dot">●</span>
+                        Live event
+                    </span>
+                    <span class="video-badge">
+                        <span class="badge-dot">●</span>
+                        No Replay
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticket Cards Section -->
+        <section class="tickets-section">
+            <div class="tickets-grid">
+                <!-- Ticket 1 -->
+                <div class="ticket-wrapper" id="ticket-1">
+                    <a href="#apply" class="ticket-3d">
+                        <!-- Ticket Shape SVG - Creates the authentic ticket silhouette -->
+                        <svg class="ticket-shape" viewBox="0 0 280 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <!-- Clip path for the ticket shape with scalloped top and side notches -->
+                                <clipPath id="ticketClip1">
+                                    <path d="
+                                        M 14 0
+                                        Q 14 7, 21 7 Q 28 7, 28 0
+                                        L 42 0 Q 42 7, 49 7 Q 56 7, 56 0
+                                        L 70 0 Q 70 7, 77 7 Q 84 7, 84 0
+                                        L 98 0 Q 98 7, 105 7 Q 112 7, 112 0
+                                        L 126 0 Q 126 7, 133 7 Q 140 7, 140 0
+                                        L 154 0 Q 154 7, 161 7 Q 168 7, 168 0
+                                        L 182 0 Q 182 7, 189 7 Q 196 7, 196 0
+                                        L 210 0 Q 210 7, 217 7 Q 224 7, 224 0
+                                        L 238 0 Q 238 7, 245 7 Q 252 7, 252 0
+                                        L 266 0 Q 266 7, 273 7 Q 280 7, 280 0
+                                        L 280 14
+                                        Q 273 14, 273 21 Q 273 28, 280 28
+                                        L 280 160
+                                        Q 268 160, 268 172 Q 268 184, 280 184
+                                        L 280 426
+                                        Q 280 440, 266 440
+                                        L 14 440
+                                        Q 0 440, 0 426
+                                        L 0 184
+                                        Q 12 184, 12 172 Q 12 160, 0 160
+                                        L 0 28
+                                        Q 7 28, 7 21 Q 7 14, 0 14
+                                        L 0 0
+                                        Z
+                                    "/>
+                                </clipPath>
+                            </defs>
+                            <!-- Border outline -->
+                            <path class="ticket-border" d="
+                                M 14 2
+                                Q 14 9, 21 9 Q 28 9, 28 2
+                                L 42 2 Q 42 9, 49 9 Q 56 9, 56 2
+                                L 70 2 Q 70 9, 77 9 Q 84 9, 84 2
+                                L 98 2 Q 98 9, 105 9 Q 112 9, 112 2
+                                L 126 2 Q 126 9, 133 9 Q 140 9, 140 2
+                                L 154 2 Q 154 9, 161 9 Q 168 9, 168 2
+                                L 182 2 Q 182 9, 189 9 Q 196 9, 196 2
+                                L 210 2 Q 210 9, 217 9 Q 224 9, 224 2
+                                L 238 2 Q 238 9, 245 9 Q 252 9, 252 2
+                                L 266 2 Q 266 9, 273 9 Q 278 9, 278 2
+                                L 278 14
+                                Q 271 14, 271 21 Q 271 28, 278 28
+                                L 278 160
+                                Q 266 160, 266 172 Q 266 184, 278 184
+                                L 278 424
+                                Q 278 436, 266 436
+                                L 14 436
+                                Q 2 436, 2 424
+                                L 2 184
+                                Q 14 184, 14 172 Q 14 160, 2 160
+                                L 2 28
+                                Q 9 28, 9 21 Q 9 14, 2 14
+                                L 2 2
+                                Z
+                            " stroke="rgba(181,158,95,0.4)" stroke-width="2" fill="none"/>
+                        </svg>
+
+                        <div class="ticket-content" style="clip-path: url(#ticketClip1);">
+                            <!-- Background Image -->
+                            <div class="ticket-bg-image">
+                                <img src="https://framerusercontent.com/images/Ta9pDqyW5k1xFKsTle3krlXu7TQ.jpg" alt="Day 1" />
+                            </div>
+
+                            <!-- Number Badge -->
+                            <div class="ticket-badge">
+                                <span class="badge-number"># 1</span>
+                            </div>
+
+                            <!-- Day Label -->
+                            <div class="ticket-day-label">Day 1 - Tuesday, January 27th</div>
+
+                            <!-- Main Title -->
+                            <h3 class="ticket-title">Learn The<br/>Truth</h3>
+
+                            <!-- Description Box -->
+                            <div class="ticket-description">
+                                <p><strong>The Truth:</strong> Industry Updates & What's Working Now</p>
+                            </div>
+                        </div>
+
+                        <!-- Grain overlay -->
+                        <div class="ticket-grain"></div>
+                    </a>
+                </div>
+
+                <!-- Ticket 2 -->
+                <div class="ticket-wrapper" id="ticket-2">
+                    <a href="#apply" class="ticket-3d">
+                        <svg class="ticket-shape" viewBox="0 0 280 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <clipPath id="ticketClip2">
+                                    <path d="
+                                        M 14 0
+                                        Q 14 7, 21 7 Q 28 7, 28 0
+                                        L 42 0 Q 42 7, 49 7 Q 56 7, 56 0
+                                        L 70 0 Q 70 7, 77 7 Q 84 7, 84 0
+                                        L 98 0 Q 98 7, 105 7 Q 112 7, 112 0
+                                        L 126 0 Q 126 7, 133 7 Q 140 7, 140 0
+                                        L 154 0 Q 154 7, 161 7 Q 168 7, 168 0
+                                        L 182 0 Q 182 7, 189 7 Q 196 7, 196 0
+                                        L 210 0 Q 210 7, 217 7 Q 224 7, 224 0
+                                        L 238 0 Q 238 7, 245 7 Q 252 7, 252 0
+                                        L 266 0 Q 266 7, 273 7 Q 280 7, 280 0
+                                        L 280 14
+                                        Q 273 14, 273 21 Q 273 28, 280 28
+                                        L 280 160
+                                        Q 268 160, 268 172 Q 268 184, 280 184
+                                        L 280 426
+                                        Q 280 440, 266 440
+                                        L 14 440
+                                        Q 0 440, 0 426
+                                        L 0 184
+                                        Q 12 184, 12 172 Q 12 160, 0 160
+                                        L 0 28
+                                        Q 7 28, 7 21 Q 7 14, 0 14
+                                        L 0 0
+                                        Z
+                                    "/>
+                                </clipPath>
+                            </defs>
+                            <path class="ticket-border" d="
+                                M 14 2
+                                Q 14 9, 21 9 Q 28 9, 28 2
+                                L 42 2 Q 42 9, 49 9 Q 56 9, 56 2
+                                L 70 2 Q 70 9, 77 9 Q 84 9, 84 2
+                                L 98 2 Q 98 9, 105 9 Q 112 9, 112 2
+                                L 126 2 Q 126 9, 133 9 Q 140 9, 140 2
+                                L 154 2 Q 154 9, 161 9 Q 168 9, 168 2
+                                L 182 2 Q 182 9, 189 9 Q 196 9, 196 2
+                                L 210 2 Q 210 9, 217 9 Q 224 9, 224 2
+                                L 238 2 Q 238 9, 245 9 Q 252 9, 252 2
+                                L 266 2 Q 266 9, 273 9 Q 278 9, 278 2
+                                L 278 14
+                                Q 271 14, 271 21 Q 271 28, 278 28
+                                L 278 160
+                                Q 266 160, 266 172 Q 266 184, 278 184
+                                L 278 424
+                                Q 278 436, 266 436
+                                L 14 436
+                                Q 2 436, 2 424
+                                L 2 184
+                                Q 14 184, 14 172 Q 14 160, 2 160
+                                L 2 28
+                                Q 9 28, 9 21 Q 9 14, 2 14
+                                L 2 2
+                                Z
+                            " stroke="rgba(181,158,95,0.4)" stroke-width="2" fill="none"/>
+                        </svg>
+
+                        <div class="ticket-content" style="clip-path: url(#ticketClip2);">
+                            <div class="ticket-bg-image">
+                                <img src="https://framerusercontent.com/images/91XGbnuf4asI6MsfARLCT8A3Vk.jpg" alt="Day 2 & 3" />
+                            </div>
+
+                            <div class="ticket-badge">
+                                <span class="badge-number"># 2</span>
+                            </div>
+
+                            <!-- Day Label -->
+                            <div class="ticket-day-label">Days 2 & 3 - Wed & Thu, Jan 28-29</div>
+
+                            <h3 class="ticket-title">Build<br/>Together</h3>
+
+                            <div class="ticket-description">
+                                <p><strong>Building Their Brand Together</strong> - Live Workshop Sessions</p>
+                            </div>
+                        </div>
+
+                        <div class="ticket-grain"></div>
+                    </a>
+                </div>
+
+                <!-- Ticket 3 -->
+                <div class="ticket-wrapper" id="ticket-3">
+                    <a href="#apply" class="ticket-3d">
+                        <svg class="ticket-shape" viewBox="0 0 280 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <clipPath id="ticketClip3">
+                                    <path d="
+                                        M 14 0
+                                        Q 14 7, 21 7 Q 28 7, 28 0
+                                        L 42 0 Q 42 7, 49 7 Q 56 7, 56 0
+                                        L 70 0 Q 70 7, 77 7 Q 84 7, 84 0
+                                        L 98 0 Q 98 7, 105 7 Q 112 7, 112 0
+                                        L 126 0 Q 126 7, 133 7 Q 140 7, 140 0
+                                        L 154 0 Q 154 7, 161 7 Q 168 7, 168 0
+                                        L 182 0 Q 182 7, 189 7 Q 196 7, 196 0
+                                        L 210 0 Q 210 7, 217 7 Q 224 7, 224 0
+                                        L 238 0 Q 238 7, 245 7 Q 252 7, 252 0
+                                        L 266 0 Q 266 7, 273 7 Q 280 7, 280 0
+                                        L 280 14
+                                        Q 273 14, 273 21 Q 273 28, 280 28
+                                        L 280 160
+                                        Q 268 160, 268 172 Q 268 184, 280 184
+                                        L 280 426
+                                        Q 280 440, 266 440
+                                        L 14 440
+                                        Q 0 440, 0 426
+                                        L 0 184
+                                        Q 12 184, 12 172 Q 12 160, 0 160
+                                        L 0 28
+                                        Q 7 28, 7 21 Q 7 14, 0 14
+                                        L 0 0
+                                        Z
+                                    "/>
+                                </clipPath>
+                            </defs>
+                            <path class="ticket-border" d="
+                                M 14 2
+                                Q 14 9, 21 9 Q 28 9, 28 2
+                                L 42 2 Q 42 9, 49 9 Q 56 9, 56 2
+                                L 70 2 Q 70 9, 77 9 Q 84 9, 84 2
+                                L 98 2 Q 98 9, 105 9 Q 112 9, 112 2
+                                L 126 2 Q 126 9, 133 9 Q 140 9, 140 2
+                                L 154 2 Q 154 9, 161 9 Q 168 9, 168 2
+                                L 182 2 Q 182 9, 189 9 Q 196 9, 196 2
+                                L 210 2 Q 210 9, 217 9 Q 224 9, 224 2
+                                L 238 2 Q 238 9, 245 9 Q 252 9, 252 2
+                                L 266 2 Q 266 9, 273 9 Q 278 9, 278 2
+                                L 278 14
+                                Q 271 14, 271 21 Q 271 28, 278 28
+                                L 278 160
+                                Q 266 160, 266 172 Q 266 184, 278 184
+                                L 278 424
+                                Q 278 436, 266 436
+                                L 14 436
+                                Q 2 436, 2 424
+                                L 2 184
+                                Q 14 184, 14 172 Q 14 160, 2 160
+                                L 2 28
+                                Q 9 28, 9 21 Q 9 14, 2 14
+                                L 2 2
+                                Z
+                            " stroke="rgba(181,158,95,0.4)" stroke-width="2" fill="none"/>
+                        </svg>
+
+                        <div class="ticket-content" style="clip-path: url(#ticketClip3);">
+                            <div class="ticket-bg-image">
+                                <img src="https://framerusercontent.com/images/Zpuz1g7pNEdIgWf8EEFe7yIDmQ.jpg" alt="Day 3" />
+                            </div>
+
+                            <div class="ticket-badge">
+                                <span class="badge-number"># 3</span>
+                            </div>
+
+                            <!-- Day Label -->
+                            <div class="ticket-day-label">Bonus - Scaling Strategies</div>
+
+                            <h3 class="ticket-title">Scale<br/>Fast</h3>
+
+                            <div class="ticket-description">
+                                <p><strong>Scaling Fast:</strong> Full breakdown of my team, framework & software toolkit.</p>
+                            </div>
+                        </div>
+
+                        <div class="ticket-grain"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <div class="cta-ornament">✦ ✦ ✦</div>
+                <h3 class="cta-headline">CLAIM YOUR SPOT NOW</h3>
+                <p class="cta-subtext">Lock in your exclusive spot before we close public access.</p>
+                <a href="#apply" class="cta-button" id="cta-btn">
+                    <span class="btn-text">I'm In – Save My Seat</span>
+                    <span class="btn-subtext">Seats are limited. Instant confirmation.</span>
+                </a>
+                <div class="cta-badges">
+                    <span class="badge">Free Access</span>
+                    <span class="badge">Limited Seats</span>
+                    <span class="badge">Live Event</span>
+                    <span class="badge">No Replay</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typeform Application Section -->
+        <section class="typeform-section" id="apply">
+            <div class="typeform-container">
+                <div class="typeform-header">
+                    <div class="cta-ornament">✦ ✦ ✦</div>
+                    <h3 class="typeform-headline">SECURE YOUR FREE SEAT</h3>
+                    <p class="typeform-subtext">Fill out the form below to claim your spot at the Q4 Blueprint.</p>
+                </div>
+                <div class="typeform-embed-wrapper">
+                    <iframe
+                        src="https://form.typeform.com/to/m7RKlDJP?typeform-embed-id=8634507933510432&amp;typeform-embed=embed-widget&amp;typeform-source=breathtaking-ones-870406.framer.app&amp;typeform-medium=snippet&amp;typeform-medium-version=next&amp;embed-opacity=100&amp;typeform-embed-handles-redirect=1"
+                        data-testid="iframe"
+                        allow="microphone; camera"
+                        title="Claim your Q4 Blueprint ticket"
+                        style="border: 0px; width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section with Accordions -->
+        <section class="faq-section">
+            <div class="section-header">
+                <div class="ornament left">❧</div>
+                <h3>QUESTIONS FROM PEOPLE JUST LIKE YOU</h3>
+                <div class="ornament right">❧</div>
+            </div>
+
+            <div class="accordion-container">
+                <!-- Accordion Item 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-icon">+</span>
+                        <h5 class="accordion-title">What is this, exactly?</h5>
+                        <span class="accordion-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>A free, live 3-day cohort where we walk you through the Q4 Drop Blueprint—how new and growing brands sell out during Oct–Dec.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-icon">+</span>
+                        <h5 class="accordion-title">Who is it for?</h5>
+                        <span class="accordion-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Two groups: beginners starting from zero and brand owners in the $10K–$100K range who want consistent sell-outs and momentum into BFCM.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-icon">+</span>
+                        <h5 class="accordion-title">When is it?</h5>
+                        <span class="accordion-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>January 27th, 28th, and 29th @ 2PM PST (daily). Each session runs about 60–90 minutes with Q&A.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-icon">+</span>
+                        <h5 class="accordion-title">What will I leave with?</h5>
+                        <span class="accordion-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>A clear brand identity + drop concept, a 14-day hype calendar, supplier outreach scripts and a simple launch/AOV stack.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="newspaper-footer">
+            <div class="footer-rule"></div>
+            <div class="footer-content">
+                <a href="#apply" class="footer-cta">I'm In – Save My Seat</a>
+                <p class="footer-note">Seats are limited. Instant confirmation + reminders.</p>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 The Urban Bulletin</span>
+                <span>★</span>
+                <span>All Rights Reserved</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/index.js"></script>
+</body>
+</html>
