@@ -172,7 +172,7 @@ body {
 
 /* Masthead */
 .masthead {
-    padding: 30px 40px 20px;
+    padding: 20px 40px 15px;
     text-align: center;
     border-bottom: 3px double var(--cocoa-dark);
     position: relative;
@@ -238,7 +238,7 @@ body {
 }
 
 .masthead-main {
-    margin: 20px 0;
+    margin: 12px 0;
 }
 
 .decorative-line {
@@ -285,7 +285,7 @@ body {
 
 /* Headline Section */
 .headline-section {
-    padding: 40px;
+    padding: 25px 40px 30px;
     text-align: center;
     background: linear-gradient(180deg, transparent 0%, rgba(181, 158, 95, 0.08) 100%);
     position: relative;
@@ -931,9 +931,50 @@ body {
     .newspaper-container {
         margin: 0;
     }
-    
+
+    /* Hide masthead-sub on mobile to get video above the fold */
+    .masthead-sub {
+        display: none;
+    }
+
+    /* Tighten masthead spacing */
+    .masthead {
+        padding: 15px 20px 12px;
+    }
+
+    .masthead-top {
+        margin-bottom: 8px;
+    }
+
+    .masthead-main {
+        margin: 10px 0;
+    }
+
+    .decorative-line {
+        margin: 5px auto;
+    }
+
+    /* Tighten headline section */
+    .headline-section {
+        padding: 20px;
+    }
+
+    .kicker {
+        margin-bottom: 10px;
+        padding: 4px 12px;
+        font-size: 10px;
+    }
+
+    .headline-rule {
+        margin: 12px auto;
+    }
+
+    /* Tighten video section */
+    .video-section {
+        padding: 20px;
+    }
+
     .masthead,
-    .headline-section,
     .cards-section,
     .cta-section,
     .faq-section,
@@ -941,35 +982,35 @@ body {
         padding-left: 20px;
         padding-right: 20px;
     }
-    
+
     .ticker-content {
         font-size: 11px;
         gap: 20px;
     }
-    
+
     .sub-headlines {
         grid-template-columns: 1fr;
     }
-    
+
     .sub-headline-item {
         border-right: none;
         border-bottom: 1px solid rgba(181, 158, 95, 0.3);
     }
-    
+
     .sub-headline-item:last-child {
         border-bottom: none;
     }
-    
+
     .card-header {
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
-    
+
     .faq-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .cta-badges {
         flex-direction: column;
         align-items: center;
@@ -981,7 +1022,7 @@ body {
    =================================== */
 
 .video-section {
-    padding: 40px;
+    padding: 30px 40px;
     background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
     position: relative;
 }
